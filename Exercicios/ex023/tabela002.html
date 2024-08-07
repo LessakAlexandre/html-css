@@ -10,6 +10,8 @@
         }
         table{
             width: 500px;
+            border-collapse: collapse;
+            position: relative;
 
         }
         td, th{
@@ -23,16 +25,25 @@
         td.num{
             text-align: right;
         }
+        tbody > tr:nth-child(2n){
+            background-color: darkgray;
+        }
+        thead > tr> th{
+            position: sticky;
+            top: -1px;
+            background-color: darkgray;
+        }
 
     </style>
 </head>
 <body>
     <h1>Uso de tabels grandes</h1>
     <table>
+        <caption>População das unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
             
         </thead>
@@ -55,8 +66,8 @@
         
         </tbody>
         <tfoot>
-            <th>Total de habitantes</th>
-            <td>0000</td>
+            <th scope="row">Total de habitantes</th>
+            <td class="num"><strong>0000</strong></td>
         </tfoot>
     </table>
 
