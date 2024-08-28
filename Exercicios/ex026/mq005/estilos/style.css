@@ -16,8 +16,10 @@ header>h1{
     text-align: center;
     padding: 20px 0px;
 }
-@media screen and (min-width:600px) {
-    
+@media screen and (min-width:768px) {
+    i#burger{
+        display: none;
+    }
     
     menu li{
         display: inline;
@@ -34,7 +36,7 @@ header>h1{
         background-color: rgb(83, 83, 83);
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     i#burger{
         background-color: rgb(48, 48, 48);
         color: white;
@@ -67,6 +69,9 @@ header>h1{
     menu>ul>li>a:hover{
         background-color: gray;
     }
+}
+main{
+    width: 90vw;
 }
 main>section{
     max-width: 600px;
